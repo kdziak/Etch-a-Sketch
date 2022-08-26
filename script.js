@@ -1,20 +1,19 @@
+const container = document.getElementById('grid');
+const cells = document.getElementsByClassName('cell');
+
 function createGrid(k) {
     for (let i = 0; i < k; i++) {
-        let container = document.getElementById('grid');
-        let cell = document.createElement('div');
-        cell.innerHTML = "TEXT";
-        cell.classList = 'cell';
-        container.appendChild(cell);
+        const cell = document.createElement('div');
+        cell.classList.add('cell');
         
-    }
-}
+        container.appendChild(cell);
+        cell.onmouseover = function() {
+            this.style.backgroundColor = 'black';
+        };
+    };
+};
 
 createGrid(16);
 
-const gridHolder = document.querySelector('#grid');
-gridHolder.onmouseover =
-    function() {
-        console.log('it works');
-    };
 
 
