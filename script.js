@@ -13,7 +13,17 @@ function createGrid(k) {
     };
 };
 
-createGrid(16);
 
 
 
+//let input = window.prompt('how many squares?');
+
+
+const btn = document.getElementById('userInputBtn').addEventListener
+('click', getUserInput);
+
+function getUserInput() {
+    container.innerHTML = '';
+    let input = window.prompt('How many squares?')
+    createGrid(input);
+}
